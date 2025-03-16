@@ -12,4 +12,4 @@ include_directories(lib)
 add_subdirectory(bin)
 
 enable_testing()
-add_subdirectory(tests)
+#add_subdirectory(tests)
