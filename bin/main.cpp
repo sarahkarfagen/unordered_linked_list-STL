@@ -4,14 +4,15 @@
 
 int main(int argc, char** argv) {
     unrolled_list<int> a;
-    a.push_back(10);
-    a.push_front(5);
-    std::cout << a.back() << ' ' << a.front() << std::endl;
-    a.push_back(15);
-    auto it = a.begin();
-    it++;
-    a.erase(it);
-    it = a.begin();
-    for (; it != a.end(); it++) std::cout << *it << ' ';
+    for (int i = 1; i <= 14; ++i) {
+        a.push_back(i);
+    }
+    for (int i = 0; i < 5; ++i) {
+        a.pop_front();
+    }
+    std::cout << a.size() << '\n';
+    for (auto i : a) {
+        std::cout << i << ' ';
+    }
     return 0;
 }
